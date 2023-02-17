@@ -1,0 +1,27 @@
+{
+  "name": "studion",
+  "version": "0.0.1",
+  "description": "home page studion",
+  "main": "src/index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Samuelaraujo10/Studion.git"
+  },
+  "keywords": [
+    "html",
+    "css",
+    "javaScript"
+  ],
+  "author": "Samuel Araujo",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Samuelaraujo10/Studion/issues"
+  },
+  "homepage": "https://github.com/Samuelaraujo10/Studion#readme",
+  "devDependencies": {
+    "live-server": "^1.2.2"
+  }
+}
