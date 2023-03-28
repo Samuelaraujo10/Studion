@@ -1,5 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Aboreto&family=Montserrat:wght@300;400;700;900&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;700;900&family=Roboto&display=swap');
 * {
   box-sizing: border-box;
 }
@@ -7,14 +6,25 @@
 :root {
   
   font-family: 'Montserrat', sans-serif;
-  font-size: 16px;
+  font-size: 1rem;
+  --color-copy: #333;
   --color-primary: #ffc500;
-  --default-padding: 1rem;
+  --default-padding: 16px;
+  color: var(--color-copy);
 }
 
 body {
   margin: 0;
-  padding-top: 7.75rem;
+  padding-top: 124px;
+}
+
+header, main, footer {
+  overflow-x: hidden;
+}
+
+.container {
+  max-width: 1140px;
+  margin: 0 auto;
 }
 
 ul {
@@ -27,16 +37,21 @@ ul {
 .navBar {
   position: fixed;  
   z-index: 1;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: #000;
+  color: #fff;
+}
+
+.navbar__container {
   display: grid;
   grid-template-columns: 1fr 9fr;
   align-items: center;
-  top: 0;
-  left: 0;
+  
   width: 100vw;
-  height: 7.75rem;
-  padding: 0 1rem;
-  background-color: #000;
-  color: #fff;
+  height: 124px;
+  padding: 0 16px;
   
 }
 
@@ -45,8 +60,8 @@ ul {
 }
 
 .navBar__links li {
-  font-size: .875rem;
-  margin-right: 3rem;
+  font-size: 14px;
+  margin-right: 48px;
   text-transform: uppercase;
 }
 
@@ -60,7 +75,7 @@ ul {
 }
 
 .logo-studion {
-  font-size: 2.375rem;
+  font-size: 38px;
   font-weight: 900;
   line-height: 1ch;
   text-transform: uppercase;
@@ -68,7 +83,7 @@ ul {
 }
 
 .logo-studion__subtitle {
-  font-size: .875rem;
+  font-size: 14px;
   font-weight: 300;
  
 }
@@ -83,7 +98,7 @@ ul {
 }
 .slide {
   position: relative;
-  height: calc(100vh - 7.75rem);
+  height: calc(100vh - 124px);
 }
 
 .slide__background-image {
@@ -95,21 +110,21 @@ ul {
 
 .slide__copy {
   position: absolute;
-  top: 6.25rem;
+  top: 100px;
   left: 50vw;
 }
 
 .slide__copy h6 {
-  font-size: .9375rem;
+  font-size: 15px;
   font-weight: 400;
   text-transform: uppercase;
-  letter-spacing: .1875rem;
+  letter-spacing: 3px;
 }
 
 .slide__copy h2 {
-  font-size: 6.25rem;
+  font-size: 100px;
   text-transform: uppercase;
-  line-height: 6.25rem;
+  line-height: 100px;
 }
 
 .slide__copy h2 span {
@@ -118,20 +133,84 @@ ul {
 
 .btn {
   cursor: pointer;
-  padding: 1rem 2.5rem;
-  border: .125rem solid #fff;
-  border-radius: 1.625rem;
+  padding: 16px 40px;
+  border: 2px solid #fff;
+  border-radius: 26px;
   color: var(--color-primary);
   background: unset; 
-  font-size: .9375rem;
+  font-size: 15px;
   font-weight: 700;
   text-transform: uppercase;
   transition: 0.5s all ease;
 }
 
-.btn:hover, .btn:active, .btn:focus {
+.btn:hover, .btn:active, .btn:focus, .btn--institutional {
   border-color: var(--color-primary);
   background-color: var(--color-primary);
   color: #fff;
 }
 
+#counter {
+  background-color: var(--color-primary);
+  color: #fff;
+  text-transform: uppercase;
+}
+
+.counter__container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(18.75rem, 1fr));
+  place-items: center;
+  padding: 70px 16px;  
+}
+
+.counter__container h3 {
+  font-size: 35px;
+}
+
+.counter__container h3 small {
+  display: block;
+  font-size: 20px;
+}
+
+
+.institutional {
+  display: grid;
+  grid-template-columns: auto auto;
+  gap: 50px;
+  align-items: center;
+  padding: 70px 16px;
+}
+
+.institutional__image {
+  max-width: 550px;
+}
+
+.institutional__copy {
+  padding: 0 30px;
+}
+
+.institutional__copy h6 {
+  font-size: 14px;
+  font-weight: 300;
+  letter-spacing: 1.6px;
+  text-transform: uppercase;
+  margin: 0;
+}
+
+.institutional__copy h4 {
+  font-size: 25px;
+  margin-top: 16px;
+}
+
+.institutional p {
+  font-family: 'roboto', sans-serif;
+  font-size: 17px;
+  line-height: 27px;
+  margin-bottom: 0;
+  margin-bottom: 2.5rem;
+}
+
+.btn--institutional:hover {
+  color: var(--color-copy);
+  background: unset;
+}
